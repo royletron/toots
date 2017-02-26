@@ -14,3 +14,11 @@ export function authSuccess(user) {
     user
   }
 }
+
+export const AUTH_FAILURE = 'AUTH_FAILURE';
+export function authFailure(error) {
+  return {
+    type: AUTH_FAILURE,
+    error
+  }
+}
