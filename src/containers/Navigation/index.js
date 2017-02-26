@@ -3,7 +3,7 @@ import Navigation from '../../components/Navigation';
 
 function mapStateToProps(state) {
   return {
-    logged: state.Auth.logged
+    logged: state.Auth.user !== undefined
   }
 }
 

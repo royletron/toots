@@ -5,8 +5,12 @@ export default class Navigation extends React.Component {
   render () {
     return (
       <div>
-        <Link to='/signup'>Signup</Link>
-        <Link to='/login'>Login</Link>
+        { this.props.logged ? (
+          <div>hey</div>
+        ) : [
+          <Link key='signupLink' to='/signup'>Signup</Link>,
+          <Link key='loginLink' to='/login'>Login</Link>
+        ]}
       </div>
     )
   }
