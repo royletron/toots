@@ -3,10 +3,12 @@ import * as Actions from '../actions/Auth';
 import firebase from 'firebase';
 
 function* auth(action) {
+  console.log(action);
   try {
     var user = yield firebase.auth().signInWithEmailAndPassword(action.email, action.password);
+    yield put({ type: Actions.AUTH_SUCCESS, user });
   } catch (error) {
-    put({ type: Actions.AUTH_FAILURE, error });
+    yield put({ type: Actions.AUTH_FAILURE, error });
   }
 }
 

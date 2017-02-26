@@ -4,8 +4,8 @@ import firebase from 'firebase';
 
 function* signup(action) {
   try {
-    var test = yield firebase.auth().createUserWithEmailAndPassword(action.email, action.password)
-    console.log(test);
+    var user = yield firebase.auth().createUserWithEmailAndPassword(action.email, action.password)
+    yield put({ type: Actions.SIGNUP_SUCCESS, user })
   } catch (error) {
     yield put({ type: Actions.SIGNUP_FAILURE, error})
   }
