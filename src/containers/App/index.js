@@ -3,6 +3,7 @@ import styles from './style.css';
 import Login from '../Login';
 import Signup from '../Signup';
 import Navigation from '../Navigation';
+import Home from '../../pages/Home';
 
 import {
   BrowserRouter as Router,
@@ -15,7 +16,7 @@ export default class App extends React.Component {
       <Router>
         <div>
           <Navigation />
-          <p>Hello</p>
+          <Route exact path='/' component={Home} />
           <Route path='/signup' component={Signup} />
           <Route path='/login' component={Login} />
         </div>
