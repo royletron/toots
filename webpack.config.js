@@ -46,6 +46,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
+    new webpack.EnvironmentPlugin(['FIREBASE_KEY', 'FIREBASE_DOMAIN']),
     new ProgressBarPlugin()
   ],
 };

@@ -4,11 +4,12 @@ import { authSuccess } from './actions/Auth';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import firebase from 'firebase';
+
 firebase.initializeApp({
-  apiKey: 'AIzaSyDTvJCEgcOPQwEm-PEWwmSEIRqWO7w9xUc',
-  authDomain: 'toots-fcea3.firebaseapp.com'
-})
-;
+  apiKey: process.env.FIREBASE_KEY,
+  authDomain: process.env.FIREBASE_DOMAIN
+});
+
 import store from './store';
 
 firebase.auth().onAuthStateChanged((user) => {
