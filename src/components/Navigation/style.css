@@ -1,0 +1,16 @@
+.this {
+  width: 200px;
+  color: white;
+  background-color: #7692e4;
+}
+
+.link {
+  display: block;
+  margin: 15px;
+  color: white;
+  text-decoration: none;
+  &.active {
+    border-bottom: 3px solid #f2f062;
+  }
+}
+

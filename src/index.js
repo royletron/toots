@@ -4,6 +4,7 @@ import { authSuccess } from './actions/Auth';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import firebase from 'firebase';
+import './style.css';
 
 firebase.initializeApp({
   apiKey: process.env.FIREBASE_KEY,

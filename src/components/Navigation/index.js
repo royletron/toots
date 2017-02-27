@@ -1,15 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import styles from './style.css';
 
 export default class Navigation extends React.Component {
   render () {
     return (
-      <div>
+      <div className={styles.this}>
         { this.props.logged ? (
-          <div>hey</div>
+          <NavLink className={styles.link} activeClassName={styles.active} key='writeLink' to='/write'>Write</NavLink>
         ) : [
-          <Link key='signupLink' to='/signup'>Signup</Link>,
-          <Link key='loginLink' to='/login'>Login</Link>
+          <NavLink key='signupLink' to='/signup'>Signup</NavLink>,
+          <NavLink key='loginLink' to='/login'>Login</NavLink>
         ]}
       </div>
     )

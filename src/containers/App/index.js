@@ -4,6 +4,7 @@ import Login from '../Login';
 import Signup from '../Signup';
 import Navigation from '../Navigation';
 import Home from '../../pages/Home';
+import Write from '../../containers/Write';
 
 import {
   BrowserRouter as Router,
@@ -14,11 +15,12 @@ export default class App extends React.Component {
   render () {
     return (
       <Router>
-        <div>
+        <div className={styles.app}>
           <Navigation />
           <Route exact path='/' component={Home} />
           <Route path='/signup' component={Signup} />
           <Route path='/login' component={Login} />
+          <Route path='/write' component={Write} />
         </div>
       </Router>
     )
